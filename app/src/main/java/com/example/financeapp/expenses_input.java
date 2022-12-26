@@ -15,15 +15,15 @@ public class expenses_input extends AppCompatActivity {
         setContentView(R.layout.activity_expenses_input);
 
         //Declare
-        Button button_tambah2;
+        Button button_tambah;
         EditText input_expenses;
 
         //ID
-        button_tambah2 = findViewById(R.id.button_tambah2);
+        button_tambah = findViewById(R.id.button_tambah);
         input_expenses = findViewById(R.id.input_expenses);
 
         //button
-        button_tambah2.setOnClickListener(new View.OnClickListener() {
+        button_tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Declare

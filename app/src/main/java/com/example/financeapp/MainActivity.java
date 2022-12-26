@@ -67,17 +67,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Intent
         Intent intent = getIntent();
-        String expenses = intent.getExtras().getString("key_expenses");
-        String income = intent.getExtras().getString("key_income");
+        String expenses = intent.getStringExtra("key_expenses");
+        String income = intent.getStringExtra("key_income");
 
         //Pengeluaran
         if (expenses != null) {
-            text_pengeluaran_rupiah.setText("Rp. " + expenses);
+            text_pengeluaran_rupiah.setText("Rp. " + String.format("%,.0f", Double.valueOf(expenses)));
         }
 
         //Penghasilan
-        if (income != null) {
-            text_penghasilan_rupiah.setText("Rp. " + income);
+        if (income!= null) {
+            text_penghasilan_rupiah.setText("Rp. " + String.format("%,.0f", Double.valueOf(income)));
         }
     }
 }
